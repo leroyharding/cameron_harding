@@ -170,18 +170,20 @@ b_draw.rounded_rectangle([(rx, ry), (box_w, ry + 105)], radius=16, fill=(20, 22,
 b_draw.text((rx + 24, ry + 20), "DIRECT BOOKINGS & CASTING", fill=gold, font=font_sans_xs)
 b_draw.text((rx + 24, ry + 50), "cameronhardingmodel@gmail.com", fill=(255, 255, 255, 255), font=font_email)
 
-# Website Box with Web Icon
+# Website Box with Web Icon & Title
 ry += 130
-b_draw.rounded_rectangle([(rx, ry), (box_w, ry + 90)], radius=16, fill=(20, 22, 27, 255), outline=(212, 175, 55, 90), width=1)
-# Draw web icon
+b_draw.rounded_rectangle([(rx, ry), (box_w, ry + 105)], radius=16, fill=(20, 22, 27, 255), outline=(212, 175, 55, 90), width=1)
+b_draw.text((rx + 24, ry + 20), "WEBSITE", fill=gold, font=font_sans_xs)
+
+# Draw web icon and URL below title
 b_icon_r = 10
-b_icon_cx = rx + 34
-b_icon_cy = ry + 45
+b_icon_cx = rx + 36
+b_icon_cy = ry + 62
 b_draw.ellipse([(b_icon_cx - b_icon_r, b_icon_cy - b_icon_r), (b_icon_cx + b_icon_r, b_icon_cy + b_icon_r)], outline=gold, width=2)
 b_draw.ellipse([(b_icon_cx - b_icon_r // 2, b_icon_cy - b_icon_r), (b_icon_cx + b_icon_r // 2, b_icon_cy + b_icon_r)], outline=gold, width=1)
 b_draw.line([(b_icon_cx - b_icon_r, b_icon_cy), (b_icon_cx + b_icon_r, b_icon_cy)], fill=gold, width=1)
 
-b_draw.text((rx + 58, ry + 32), "cameron-harding.vercel.app/", fill=gold, font=font_web)
+b_draw.text((rx + 58, ry + 50), "cameron-harding.vercel.app/", fill=gold, font=font_web)
 
 # Bottom Agency note
 b_draw.text((rx, H - 42), "AVAILABLE FOR UK NATIONWIDE & INTERNATIONAL BOOKINGS", fill=(120, 125, 135, 255), font=font_sans_xs)
