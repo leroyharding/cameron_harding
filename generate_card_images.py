@@ -76,7 +76,7 @@ draw.rounded_rectangle([(18, 18), (W - 18, H - 18)], radius=24, outline=(212, 17
 
 # Text on right side
 text_x = 450
-y = 140
+y = 150
 
 # Small badge
 draw.text((text_x, y), "PROFESSIONAL MALE MODEL", fill=gold, font=font_sans_xs)
@@ -96,27 +96,33 @@ y += 68
 
 # Gold Divider Line
 draw.line([(text_x, y), (W - 60, y)], fill=gold, width=2)
-y += 24
+y += 26
 
 # Title "MODEL"
 draw_spaced_text(draw, "M O D E L", text_x, y, font_sans_bold, gold, spacing=8)
-y += 55
-
-# Disciplines
-draw.text((text_x, y), "RUNWAY • COMMERCIAL • EDITORIAL • FITNESS", fill=(180, 184, 192, 255), font=font_sans_xs)
-y += 30
-draw.text((text_x, y), "189 CM / 6'2.5\" • YORKSHIRE, UK", fill=(140, 145, 155, 255), font=font_sans_xs)
 y += 60
 
-# Small website link at bottom right
-draw.text((text_x, y), "cameron-harding.vercel.app", fill=gold, font=font_sans_reg)
+# Disciplines (Location & height measurement removed as requested)
+draw.text((text_x, y), "RUNWAY • COMMERCIAL • EDITORIAL • FITNESS", fill=(180, 184, 192, 255), font=font_sans_xs)
+y += 42
+
+# Web icon (globe) + website link
+icon_r = 10
+icon_cx = text_x + icon_r
+icon_cy = y + icon_r
+# Draw globe icon
+draw.ellipse([(icon_cx - icon_r, icon_cy - icon_r), (icon_cx + icon_r, icon_cy + icon_r)], outline=gold, width=2)
+draw.ellipse([(icon_cx - icon_r // 2, icon_cy - icon_r), (icon_cx + icon_r // 2, icon_cy + icon_r)], outline=gold, width=1)
+draw.line([(icon_cx - icon_r, icon_cy), (icon_cx + icon_r, icon_cy)], fill=gold, width=1)
+
+draw.text((text_x + 30, y - 2), "cameron-harding.vercel.app/", fill=gold, font=font_sans_reg)
 
 front_rgb = front.convert("RGB")
 front_rgb.save("business_card_front.png", dpi=(300, 300))
 print("Saved business_card_front.png (300 DPI, 1012x638)")
 
 # -------------------------------------------------------------
-# 2. GENERATE BACK SIDE
+# 2. GENERATE BACK SIDE (Measurements removed, bigger QR code)
 # -------------------------------------------------------------
 back = Image.new("RGBA", (W, H), (11, 12, 14, 255))
 b_draw = ImageDraw.Draw(back)
@@ -127,55 +133,53 @@ b_draw.rounded_rectangle([(18, 18), (W - 18, H - 18)], radius=24, outline=(212, 
 # Header
 b_draw.text((60, 48), "CAMERON HARDING", fill=(255, 255, 255, 255), font=font_serif_md)
 b_draw.text((W - 200, 56), "OFFICIAL PORTFOLIO", fill=gold, font=font_sans_xs)
-b_draw.line([(60, 100), (W - 60, 100)], fill=(212, 175, 55, 100), width=1)
+b_draw.line([(60, 96), (W - 60, 96)], fill=(212, 175, 55, 100), width=1)
 
-# Left Column: QR Code Container
-qr_box_size = 280
+# Left Column: BIGGER QR Code Container (410 x 410 px!)
+qr_box_size = 400
 qr_x = 60
-qr_y = 140
+qr_y = 135
 
-# White backing rounded box for high-contrast QR scan
-b_draw.rounded_rectangle([(qr_x - 10, qr_y - 10), (qr_x + qr_box_size + 10, qr_y + qr_box_size + 10)], radius=16, fill=(255, 255, 255, 255), outline=gold, width=2)
+# High-contrast white backing with gold border
+b_draw.rounded_rectangle([(qr_x - 12, qr_y - 12), (qr_x + qr_box_size + 12, qr_y + qr_box_size + 12)], radius=20, fill=(255, 255, 255, 255), outline=gold, width=3)
 
 with Image.open(qr_path) as qr_raw:
     qr_resized = qr_raw.resize((qr_box_size, qr_box_size), Image.Resampling.LANCZOS)
     back.paste(qr_resized, (qr_x, qr_y))
 
 # Text below QR Code
-b_draw.text((qr_x + 30, qr_y + qr_box_size + 24), "SCAN TO VIEW PORTFOLIO", fill=gold, font=font_sans_xs)
-b_draw.text((qr_x + 22, qr_y + qr_box_size + 50), "cameron-harding.vercel.app", fill=(180, 184, 192, 255), font=font_sans_xs)
+b_draw.text((qr_x + 85, qr_y + qr_box_size + 24), "SCAN TO VIEW DIGITAL PORTFOLIO", fill=gold, font=font_sans_xs)
 
-# Right Column: Contact Details & Vital Specs
-rx = 420
-ry = 130
+# Right Column: Instagram, Email, and Website details (Measurements removed!)
+rx = 520
+ry = 150
 
-# Instagram Card Box
-b_draw.rounded_rectangle([(rx, ry), (W - 60, ry + 80)], radius=12, fill=(20, 22, 27, 255), outline=(255, 255, 255, 25), width=1)
-b_draw.text((rx + 24, ry + 16), "INSTAGRAM", fill=gold, font=font_sans_xs)
-b_draw.text((rx + 24, ry + 40), "@Cameronharding11", fill=(255, 255, 255, 255), font=font_sans_bold)
+# Instagram Card Box (Large and prominent)
+b_draw.rounded_rectangle([(rx, ry), (W - 60, ry + 105)], radius=16, fill=(20, 22, 27, 255), outline=(212, 175, 55, 80), width=1)
+b_draw.text((rx + 28, ry + 20), "INSTAGRAM DESK", fill=gold, font=font_sans_xs)
+b_draw.text((rx + 28, ry + 48), "@Cameronharding11", fill=(255, 255, 255, 255), font=font_serif_md)
 
 # Email Card Box
-ry += 95
-b_draw.rounded_rectangle([(rx, ry), (W - 60, ry + 80)], radius=12, fill=(20, 22, 27, 255), outline=(255, 255, 255, 25), width=1)
-b_draw.text((rx + 24, ry + 16), "DIRECT BOOKINGS & CASTING", fill=gold, font=font_sans_xs)
-b_draw.text((rx + 24, ry + 40), "cameronhardingmodel@gmail.com", fill=(255, 255, 255, 255), font=font_sans_reg)
+ry += 130
+b_draw.rounded_rectangle([(rx, ry), (W - 60, ry + 105)], radius=16, fill=(20, 22, 27, 255), outline=(255, 255, 255, 25), width=1)
+b_draw.text((rx + 28, ry + 20), "DIRECT BOOKINGS & CASTING", fill=gold, font=font_sans_xs)
+b_draw.text((rx + 28, ry + 50), "cameronhardingmodel@gmail.com", fill=(255, 255, 255, 255), font=font_sans_bold)
 
-# Vital Stats Box
-ry += 95
-b_draw.rounded_rectangle([(rx, ry), (W - 60, ry + 140)], radius=12, fill=(20, 22, 27, 255), outline=(255, 255, 255, 25), width=1)
-b_draw.text((rx + 24, ry + 16), "MODEL MEASUREMENTS", fill=gold, font=font_sans_xs)
+# Website Box with Web Icon
+ry += 130
+b_draw.rounded_rectangle([(rx, ry), (W - 60, ry + 90)], radius=16, fill=(20, 22, 27, 255), outline=(212, 175, 55, 80), width=1)
+# Draw web icon
+b_icon_r = 10
+b_icon_cx = rx + 36
+b_icon_cy = ry + 45
+b_draw.ellipse([(b_icon_cx - b_icon_r, b_icon_cy - b_icon_r), (b_icon_cx + b_icon_r, b_icon_cy + b_icon_r)], outline=gold, width=2)
+b_draw.ellipse([(b_icon_cx - b_icon_r // 2, b_icon_cy - b_icon_r), (b_icon_cx + b_icon_r // 2, b_icon_cy + b_icon_r)], outline=gold, width=1)
+b_draw.line([(b_icon_cx - b_icon_r, b_icon_cy), (b_icon_cx + b_icon_r, b_icon_cy)], fill=gold, width=1)
 
-# 2x2 stats grid inside box
-b_draw.text((rx + 24, ry + 45), "HEIGHT: 189 cm / 6'2.5\"", fill=(220, 222, 226, 255), font=font_sans_xs)
-b_draw.text((rx + 270, ry + 45), "CHEST: 42″", fill=(220, 222, 226, 255), font=font_sans_xs)
-
-b_draw.text((rx + 24, ry + 75), "WAIST: 34″ / TROUSER 34″", fill=(220, 222, 226, 255), font=font_sans_xs)
-b_draw.text((rx + 270, ry + 75), "SHOE: UK 12 / EU 47", fill=(220, 222, 226, 255), font=font_sans_xs)
-
-b_draw.text((rx + 24, ry + 105), "HAIR: Black Curly  •  EYES: Brown  •  LOCATION: Yorkshire, UK", fill=(150, 155, 165, 255), font=font_sans_xs)
+b_draw.text((rx + 60, ry + 32), "cameron-harding.vercel.app/", fill=gold, font=font_sans_bold)
 
 # Bottom Agency note
-b_draw.text((rx, H - 48), "AVAILABLE FOR UK NATIONWIDE & INTERNATIONAL BOOKINGS", fill=(120, 125, 135, 255), font=font_sans_xs)
+b_draw.text((rx, H - 42), "AVAILABLE FOR UK NATIONWIDE & INTERNATIONAL BOOKINGS", fill=(120, 125, 135, 255), font=font_sans_xs)
 
 back_rgb = back.convert("RGB")
 back_rgb.save("business_card_back.png", dpi=(300, 300))
