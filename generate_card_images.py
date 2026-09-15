@@ -151,32 +151,37 @@ with Image.open(qr_path) as qr_raw:
 b_draw.text((qr_x + 85, qr_y + qr_box_size + 24), "SCAN TO VIEW DIGITAL PORTFOLIO", fill=gold, font=font_sans_xs)
 
 # Right Column: Instagram, Email, and Website details (Measurements removed!)
-rx = 520
-ry = 150
+rx = 500
+ry = 145
+box_w = W - 50  # 962 px, giving 462 px box width
 
-# Instagram Card Box (Large and prominent)
-b_draw.rounded_rectangle([(rx, ry), (W - 60, ry + 105)], radius=16, fill=(20, 22, 27, 255), outline=(212, 175, 55, 80), width=1)
-b_draw.text((rx + 28, ry + 20), "INSTAGRAM DESK", fill=gold, font=font_sans_xs)
-b_draw.text((rx + 28, ry + 48), "@Cameronharding11", fill=(255, 255, 255, 255), font=font_serif_md)
+font_insta = ImageFont.truetype(os.path.join(font_dir, "georgiab.ttf"), 30)
+font_email = ImageFont.truetype(os.path.join(font_dir, "calibri.ttf"), 23)
+font_web = ImageFont.truetype(os.path.join(font_dir, "calibrib.ttf"), 23)
+
+# Instagram Card Box (Clean padding, fits perfectly)
+b_draw.rounded_rectangle([(rx, ry), (box_w, ry + 105)], radius=16, fill=(20, 22, 27, 255), outline=(212, 175, 55, 90), width=1)
+b_draw.text((rx + 24, ry + 20), "INSTAGRAM", fill=gold, font=font_sans_xs)
+b_draw.text((rx + 24, ry + 48), "@Cameronharding11", fill=(255, 255, 255, 255), font=font_insta)
 
 # Email Card Box
 ry += 130
-b_draw.rounded_rectangle([(rx, ry), (W - 60, ry + 105)], radius=16, fill=(20, 22, 27, 255), outline=(255, 255, 255, 25), width=1)
-b_draw.text((rx + 28, ry + 20), "DIRECT BOOKINGS & CASTING", fill=gold, font=font_sans_xs)
-b_draw.text((rx + 28, ry + 50), "cameronhardingmodel@gmail.com", fill=(255, 255, 255, 255), font=font_sans_bold)
+b_draw.rounded_rectangle([(rx, ry), (box_w, ry + 105)], radius=16, fill=(20, 22, 27, 255), outline=(212, 175, 55, 90), width=1)
+b_draw.text((rx + 24, ry + 20), "DIRECT BOOKINGS & CASTING", fill=gold, font=font_sans_xs)
+b_draw.text((rx + 24, ry + 50), "cameronhardingmodel@gmail.com", fill=(255, 255, 255, 255), font=font_email)
 
 # Website Box with Web Icon
 ry += 130
-b_draw.rounded_rectangle([(rx, ry), (W - 60, ry + 90)], radius=16, fill=(20, 22, 27, 255), outline=(212, 175, 55, 80), width=1)
+b_draw.rounded_rectangle([(rx, ry), (box_w, ry + 90)], radius=16, fill=(20, 22, 27, 255), outline=(212, 175, 55, 90), width=1)
 # Draw web icon
 b_icon_r = 10
-b_icon_cx = rx + 36
+b_icon_cx = rx + 34
 b_icon_cy = ry + 45
 b_draw.ellipse([(b_icon_cx - b_icon_r, b_icon_cy - b_icon_r), (b_icon_cx + b_icon_r, b_icon_cy + b_icon_r)], outline=gold, width=2)
 b_draw.ellipse([(b_icon_cx - b_icon_r // 2, b_icon_cy - b_icon_r), (b_icon_cx + b_icon_r // 2, b_icon_cy + b_icon_r)], outline=gold, width=1)
 b_draw.line([(b_icon_cx - b_icon_r, b_icon_cy), (b_icon_cx + b_icon_r, b_icon_cy)], fill=gold, width=1)
 
-b_draw.text((rx + 60, ry + 32), "cameron-harding.vercel.app/", fill=gold, font=font_sans_bold)
+b_draw.text((rx + 58, ry + 32), "cameron-harding.vercel.app/", fill=gold, font=font_web)
 
 # Bottom Agency note
 b_draw.text((rx, H - 42), "AVAILABLE FOR UK NATIONWIDE & INTERNATIONAL BOOKINGS", fill=(120, 125, 135, 255), font=font_sans_xs)
