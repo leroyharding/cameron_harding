@@ -30,8 +30,8 @@ cameron_harding/
 ├── index.html                  # Main responsive web portfolio (links to photos/web/)
 ├── portfolio_standalone.html   # 100% self-contained single-file edition (Base64 embedded)
 ├── index_external.html         # Backup copy of the modular web version
-├── photos/                     # 38 original high-resolution photo masters
-│   └── web/                    # 38 web-optimized companion images (LANCZOS, max 1400px)
+├── photos/                     # 65 original high-resolution photo masters
+│   └── web/                    # 65 web-optimized companion images (LANCZOS, max 1400px)
 └── README.md
 ```
 
@@ -41,8 +41,8 @@ cameron_harding/
 
 - **Hero Showcase**: Featured lead portrait, location badge, live booking availability, and key measurements.
 - **Dynamic Vital Statistics**: Interactive toggle between **Metric (cm/EU)** and **Imperial (inches/UK)**.
-- **Full 38-Photo Gallery**: Filterable across *All Works*, *Runway & High Fashion*, *Commercial & Lifestyle*, *Fitness & Activewear*, and *Digitals & Polaroids*.
-- **Interactive Lightbox Carousel**: Full-screen preview with Previous/Next navigation, arrow keys (`←`/`→`/`Esc`), live counter (`X / 38`), and raw master downloads.
+- **Full 65-Photo Gallery**: Filterable across *All Works*, *Runway & High Fashion*, *Commercial & Lifestyle*, *Fitness & Activewear*, and *Digitals & Polaroids*.
+- **Interactive Lightbox Carousel**: Full-screen preview with Previous/Next navigation, arrow keys (`←`/`→`/`Esc`), live counter (`X / 65`), and raw master downloads.
 - **Agency Digitals & Polaroids**: Raw, unretouched scouting shots for agency casting desks.
 - **Official Digital Comp Card**: 4-photo composite sheet with verified measurements and dedicated `@media print` CSS for one-click PDF export or printing.
 - **Direct Casting Form**: Direct booking desk with email pre-filling and Instagram integration.

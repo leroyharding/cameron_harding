@@ -1,6 +1,6 @@
 # Cameron Harding Model Portfolio — Session Summary & Context Guide
 
-**Generated Date**: 2026-09-15  
+**Generated Date**: 2026-10-06  
 **Project**: Cameron Harding Official Model Portfolio & Business Card Suite  
 **Workspace Path**: `C:\Users\leroy\Desktop\Antigravity apps\cameron harding`  
 
@@ -52,8 +52,8 @@ cameron_harding/
 ├── README.md                   # Public GitHub documentation with deployment guide
 ├── SESSION_SUMMARY.md          # Session restore guide for next assistant session
 ├── .gitignore                  # Ignores temp files (.bat, scratch data)
-└── photos/                     # 38 original master photo files (~125 MB)
-    └── web/                    # 38 web-optimized images (LANCZOS, max 1400px, ~6 MB)
+└── photos/                     # 65 original master photo files (~145 MB)
+    └── web/                    # 65 web-optimized images (LANCZOS, max 1400px, ~8.5 MB)
         └── qr_code.png         # Scannable QR code pointing to https://cameron-harding.vercel.app/
 ```
 
@@ -63,8 +63,8 @@ cameron_harding/
 
 ### 1. Web Portfolio (`index.html` & `portfolio_standalone.html`)
 - **Primary Hero Portrait**: Set to `WhatsApp Image 2026-09-15 at 16.10.02.jpeg` with responsive dark gradient backdrop.
-- **Filterable Gallery**: 38 photos categorized into *All*, *Runway & High Fashion*, *Commercial & Lifestyle*, *Fitness & Activewear*, and *Digitals & Polaroids*.
-- **Interactive Lightbox Carousel**: Full-screen preview with Previous/Next controls, arrow keys (`←`/`→`/`Esc`), live counter (`X / 38`), and raw master downloads.
+- **Filterable Gallery**: 65 photos categorized into *All*, *Runway & High Fashion*, *Commercial & Lifestyle*, *Fitness & Activewear*, and *Digitals & Polaroids*.
+- **Interactive Lightbox Carousel**: Full-screen preview with Previous/Next controls, arrow keys (`←`/`→`/`Esc`), live counter (`X / 65`), and raw master downloads.
 - **Unit Measurement Switcher**: Instant interactive toggle between Metric (cm/EU) and Imperial (in/UK).
 - **Official Digital Comp Card**: Working modal with 4-photo composite sheet and `@media print` styling for 1-click PDF/print export.
 - **Booking Enquiry Desk**:
@@ -75,8 +75,8 @@ cameron_harding/
     3. 📋 **Copy Brief to Clipboard** (1-click copy with toast notification).
 
 ### 2. Standalone Single-File Edition (`portfolio_standalone.html`)
-- Completely self-contained file (10.62 MB).
-- All 38 photos embedded as Base64 data URIs.
+- Completely self-contained file (26.88 MB).
+- All 65 photos embedded as Base64 data URIs.
 - Requires **zero external folders** or active internet connection; can be emailed as an attachment, sent via WhatsApp, or stored on a USB drive.
 
 ### 3. CR80 Credit Card Sized Model Business Card
