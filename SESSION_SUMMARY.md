@@ -65,6 +65,7 @@ cameron_harding/
 - **Primary Hero Portrait**: Set to `WhatsApp Image 2026-09-15 at 16.10.02.jpeg` with responsive dark gradient backdrop.
 - **Top Album Placement**: The 27 newest photoshoot images lead the gallery at positions 1–27 so casting directors see the newest editorial work immediately.
 - **100% Clean Photos**: All text overlays, badges, and titles have been removed from the gallery cards for an unobstructed, luxury agency aesthetic (subtle zoom + centered glassmorphic expand icon on hover).
+- **Streamlined Layout**: Removed the 3 Key Pillars cards (Versatility, Professionalism, Physicality) and the duplicate Agency Digitals & Polaroids scouting section (plus corresponding navbar links) for a cleaner, modern editorial flow.
 - **Filterable Gallery**: 65 photos categorized into *All*, *Runway & High Fashion*, *Commercial & Lifestyle*, *Fitness & Activewear*, and *Digitals & Polaroids*.
 - **Interactive Lightbox Carousel**: Full-screen preview with Previous/Next controls, arrow keys (`←`/`→`/`Esc`), live counter (`X / 65`), and raw master downloads.
 - **Unit Measurement Switcher**: Instant interactive toggle between Metric (cm/EU) and Imperial (in/UK).
@@ -77,7 +78,7 @@ cameron_harding/
     3. 📋 **Copy Brief to Clipboard** (1-click copy with toast notification).
 
 ### 2. Standalone Single-File Edition (`portfolio_standalone.html`)
-- Completely self-contained file (26.88 MB).
+- Completely self-contained file (26.59 MB).
 - All 65 photos embedded as Base64 data URIs.
 - Requires **zero external folders** or active internet connection; can be emailed as an attachment, sent via WhatsApp, or stored on a USB drive.
 
