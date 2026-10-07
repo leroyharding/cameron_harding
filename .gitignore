@@ -2,3 +2,4 @@ push_to_github.bat
 scratch_gallery_data.json
 photos/ChatGPT*
 photos/Gemini*
+*.code-workspace
