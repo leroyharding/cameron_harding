@@ -2,7 +2,7 @@
 
 Official web portfolio for **Cameron Harding**, professional male model based in Yorkshire, UK. Specializing in Runway, Commercial, Fitness/Activewear, and Swimwear.
 
-![Cameron Harding Portfolio](photos/web/WhatsApp%20Image%202026-09-15%20at%2016.10.02.jpeg)
+![Cameron Harding Portfolio](photos/web/WhatsApp%20Image%202026-10-07%20at%2021.48.57%20(1).jpeg)
 
 ---
 
@@ -41,7 +41,7 @@ cameron_harding/
 
 - **Hero Showcase**: Featured lead portrait, location badge, live booking availability, and key measurements.
 - **Dynamic Vital Statistics**: Interactive toggle between **Metric (cm/EU)** and **Imperial (inches/UK)**.
-- **Full 79-Photo Gallery**: Filterable across *All Works*, *Runway & High Fashion*, *Commercial & Lifestyle*, *Fitness & Activewear*, and *Digitals & Polaroids*.
+- **Full 77-Photo Gallery**: Filterable across *All Works*, *Runway & High Fashion*, *Commercial & Lifestyle*, *Fitness & Activewear*, and *Digitals & Polaroids*.
 - **Interactive Lightbox Carousel**: Full-screen preview with Previous/Next navigation, arrow keys (`←`/`→`/`Esc`), live counter, and raw master downloads.
 - **Agency Digitals & Polaroids**: Raw, unretouched scouting shots for agency casting desks.
 - **Official Digital Comp Card**: 4-photo composite sheet with verified measurements and dedicated `@media print` CSS for one-click PDF export or printing.
