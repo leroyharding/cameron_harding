@@ -1,6 +1,6 @@
 # Cameron Harding Model Portfolio — Session Summary & Context Guide
 
-**Generated Date**: 2026-10-31  
+**Generated Date**: 2026-11-12  
 **Project**: Cameron Harding Official Model Portfolio & Business Card Suite  
 **Workspace Path**: `C:\Users\leroy\Desktop\Antigravity apps\cameron harding`  
 
@@ -52,8 +52,8 @@ cameron_harding/
 ├── README.md                   # Public GitHub documentation with deployment guide
 ├── SESSION_SUMMARY.md          # Session restore guide for next assistant session
 ├── .gitignore                  # Ignores temp files (.bat, scratch data)
-└── photos/                     # 65 original master photo files (~145 MB)
-    └── web/                    # 65 web-optimized images (LANCZOS, max 1400px, ~8.5 MB)
+└── photos/                     # 75+ original master photo files (~150 MB)
+    └── web/                    # 75+ web-optimized images (LANCZOS, max 1400px)
         └── qr_code.png         # Scannable QR code pointing to https://cameron-harding.vercel.app/
 ```
 
@@ -62,12 +62,12 @@ cameron_harding/
 ## 🛠 Completed Features & Accomplishments
 
 ### 1. Web Portfolio (`index.html` & `portfolio_standalone.html`)
-- **Primary Hero Portrait**: Set to `WhatsApp Image 2026-10-07 at 21.48.57 (1).jpeg` (Cameron seated in white tank top) with responsive dark gradient backdrop.
+- **Primary Hero Portrait**: Updated to `WhatsApp Image 2026-10-07 at 21.48.57 (1).jpeg` (Cameron seated in white tank top, highlighting athletic physique and presence) with responsive dark gradient backdrop.
 - **Top Album Placement**: The newest Harrogate editorial photoshoot photos lead the gallery so casting directors see the newest editorial work immediately.
+- **3-Column Grid Structural Integrity**: Resolved a container tag nesting bug by balancing all 3-level closing `</div>` tags across every gallery card, ensuring fluid responsive 3-column flow across mobile, tablet, and desktop without vertical stripping.
 - **100% Clean Photos**: All text overlays, badges, and titles have been removed from the gallery cards for an unobstructed, luxury agency aesthetic (subtle zoom + centered glassmorphic expand icon on hover).
-- **Streamlined Layout**: Removed duplicate sections for a cleaner, modern editorial flow.
-- **Filterable Gallery**: 77 photos categorized into *All*, *Runway & High Fashion*, *Commercial & Lifestyle*, *Fitness & Activewear*, and *Digitals & Polaroids*.
-- **Interactive Lightbox Carousel**: Full-screen preview with Previous/Next controls, arrow keys (`←`/`→`/`Esc`), live counter, and raw master downloads.
+- **Curated Gallery**: 77 photos categorized into *All*, *Runway & High Fashion*, *Commercial & Lifestyle*, *Fitness & Activewear*, and *Digitals & Polaroids* (2 specific photos removed as requested: `ee7883bd-05f0-49ca-96ca-e936ae1fa78f.jpeg` and `P1053268.jpg`).
+- **Interactive Lightbox Carousel**: Full-screen preview with Previous/Next controls, arrow keys (`←`/`→`/`Esc`), live counter, and raw master downloads. Every card click handler strictly targets its exact image filename.
 - **Unit Measurement Switcher**: Instant interactive toggle between Metric (cm/EU) and Imperial (in/UK).
 - **Official Digital Comp Card**: Working modal with 4-photo composite sheet and `@media print` styling for 1-click PDF/print export.
 - **Booking Enquiry Desk**:
